@@ -27,6 +27,8 @@ module.exports = function longestConsecutiveLength(array) {
      if(!last) last = true;
      if(!maxSequence[i]) maxSequence[i] = 1;
      maxSequence[i]++;
+   } else if (array[j] === prevNumber) {
+     continue;
    } else {
      if(last) {
        i++;
